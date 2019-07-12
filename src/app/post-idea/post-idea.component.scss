@@ -1,0 +1,33 @@
+
+.navbar-brand {
+    text-decoration: none;
+    color:white;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+button{
+    background-color: #4CAF50;
+    width: 120px;
+    color: white;
+    padding: 10px, 0px;
+    margin: 10%;
+}
+
+#butt{
+    display: inline-block ;
+    width:50%;
+}
+
+form
+{
+    overflow-y: auto;
+}
+
+@media only screen and (max-width: 480px) {
+    .touch .modal .modal-body {
+      max-height: none; 
+    }
+  }

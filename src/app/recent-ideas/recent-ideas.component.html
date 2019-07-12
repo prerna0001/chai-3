@@ -1,0 +1,33 @@
+<section class="section">
+
+        <!--Section heading-->
+        <h2 class="h1-responsive font-weight-bold text-center my-5">Our Recent Ideas</h2>
+        <!-- Section description -->
+        <p class="grey-text text-center w-responsive mx-auto mb-5">See some of our most recent ideas published.</p>
+          <!-- <a mdbBtn gradient="purple" rounded="true" class="white-text mb-4" mdbWavesEffect>Button</a> -->
+
+<!-- Card -->
+<div class="card-deck">
+
+        <div class="wow animated flipInX card card-image mb-3" *ngFor="let data of arrayOfIdeas" data-wow-delay="0.6s" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
+
+            <!-- Content -->
+            <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+              <div>
+                <h5 class="white-text"><i class="fas fa-lightbulb"></i> {{data.domain}}</h5>
+                <h3 class="card-title pt-2"><strong>{{data.ideaTitle}}</strong></h3>
+                <p>{{data.ideaDescription}}</p>
+                <a href='/login' mdbBtn color="white" outline="true" mdbWavesEffect>APPLY</a>
+
+              </div>
+            </div>
+            <!-- Content -->
+          </div>
+
+
+  
+  <!-- Card -->
+  
+  </div>
+  <!-- Card -->
+  </section>

@@ -1,0 +1,157 @@
+{
+    "roles" : [
+                 
+                     {
+                        "id" : 1,
+                        "domain" : "IT",
+                        "role" : "Full Stack Developer"
+                     },
+
+                     {
+                        "id" : 2,
+                        "domain" : "IT",
+                        "role" : "Hardware engineer"
+                     },
+
+                     {
+                        "id" : 3,
+                        "domain" : "IT",
+                        "role" : "Web developer"
+                     },
+
+                     {
+                        "id" : 4,
+                        "domain" : "IT",
+                        "role" : "Network Engineer"
+                     },
+
+                     {
+                        "id" : 5,
+                        "domain" : "IT",
+                        "role" : "Application developer"
+                     },
+
+                     {
+                        "id" : 6,
+                        "domain" : "IT",
+                        "role" : "Java Developer"
+                     },
+
+                     {
+                        "id" : 7,
+                        "domain": "IT",
+                        "role" : "AI Developer"
+                     },
+
+                     {
+                        "id" : 8,
+                        "domain" : "IT",
+                        "role" : "Big Data Developer"
+                     },
+
+                     {
+                        "id" : 9,
+                        "domain" : "IT",
+                        "role" : "Spring boot developer"
+                     },
+
+                     {
+                        "id" : 10,
+                        "domain" : "IT",
+                        "role": "Front End Developer"
+                     },
+
+                     {
+                        "id" : 11,
+                        "domain" : "Tourism",
+                        "role" : "Wildlife Guide"
+                     },
+
+                    {
+                        "id" : 12,
+                        "domain" : "Tourism",
+                        "role" : "Photographer"
+                    },
+
+                    {
+                        "id" : 13,
+                        "domain" : "Tourism",
+                        "role" : "Medic"
+                    },
+
+                    {
+                        "id" : 14,
+                        "domain" : "Tourism",
+                        "role" : "Cultural Guide"
+                    },
+
+                    {
+                        "id" : 15,
+                        "domain" : "IT",
+                        "role" : "CA"
+                    },
+
+
+                    {
+                        "id" : 16,
+                        "domain" : "Tourism",
+                        "role" : "CA"
+                    },
+
+                    {
+                        "id" : 17,
+                        "domain" : "IT",
+                        "role" : "Cloud Engineer"
+                    },
+
+                    {
+                        "id" :18,
+                        "domain" : "Tourism",
+                        "role" : "Ticketing Agent"
+                    },
+
+                    {
+                        "id" : 19,
+                        "domain" : "IT",
+                        "role" : "Business Analyst"
+                    },
+
+                    {
+                        "id" : 20,
+                        "domain" : "Tourism",
+                        "role" : "Business Analyst"
+                    },
+
+                    {
+                        "id" : 21,
+                        "domain" : "Tourism",
+                        "role" : "Tour guide"
+                    },
+
+                    {
+                        "id" : 22,
+                        "domain" : "IT",
+                        "role" : "Manual Tester"
+                    },
+
+                    {
+                        "id" : 23,
+                        "domain" : "IT",
+                        "role" : "Selenium Tester"
+                    },
+
+                    {
+                        "id" : 24,
+                        "domain" : "IT",
+                        "role" : "Marketing"
+                    },
+                     
+                    {
+                        "id" : 24,
+                        "domain" : "Tourism",
+                        "role" : "Marketing"
+                    }
+
+
+              ]
+}

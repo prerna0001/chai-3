@@ -1,0 +1,59 @@
+<div class="fullbody">
+  <hr>
+  <header> <button class="btn btn-primary" (click)="home()">Go To Home</button></header>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 id="heading" class="display-4">Suggestions for you</h1>
+     </div>
+
+     
+</div>
+
+<div class="container-fluid">
+<h2>Your Group</h2>
+<div class="container-fluid d-flex flex-wrap my-2" >
+
+    
+
+    <div class="card-body" *ngFor="let serviceProvider of arrayOfServiceProviders" > 
+
+       <div class="flip-card" >
+          <div class="flip-card-inner" >
+            <div class="flip-card-front">
+              <img src="http://pluspng.com/img-png/user-png-icon-male-user-icon-512.png" alt="Avatar">
+            </div>
+            <div class="flip-card-back" >
+              <h5>
+                <b>
+              <p>EmailId :{{serviceProvider.emailId}}</p> 
+              <p>Role :{{serviceProvider.role}}</p> 
+              <p>Domain :{{serviceProvider.domain}}</p>
+              <p>SubDomain :{{serviceProvider.subDomain.subdomain}}</p>
+              <p>ChargePerHour :{{serviceProvider.chargePerHour}}</p>
+                </b>
+              </h5>
+            </div>
+          </div>
+        </div>
+      
+ 
+ 
+      <div class="card-body">
+        <div class="card-body">
+            <button type="button" (click)="accept()" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Accept
+              </button>
+              <button type="button" (click)="reject()" class="btn btn-primary">Reject</button>
+
+              
+             
+              </div>
+        </div>
+    
+     </div>
+  <button  class="btn btn-primary" (click)="done()">Done</button>
+</div>
+</div>
+   
+
+   

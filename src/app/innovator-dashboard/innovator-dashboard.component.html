@@ -1,0 +1,242 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet"
+    href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+    integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+</head>
+
+
+<header>
+  <!--Navbar-->
+  <mdb-navbar SideClass="blue-gradient navbar navbar-expand-lg" [containerInside]="false">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand><a class="navbar-brand" href="#">COLLAB-JUNCTION</a></mdb-navbar-brand>
+
+    <!-- Collapsible content -->
+    <links>
+
+      <!-- Links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a href="/home" class="nav-link waves-light" mdbWavesEffect>
+            <mdb-icon fas icon="home"></mdb-icon> HOME <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a (click)="goToProfile()" class="nav-link waves-light" mdbWavesEffect>
+            <mdb-icon fas icon="user"></mdb-icon> PROFILE
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="/home" class="nav-link waves-light" mdbWavesEffect>
+            <mdb-icon fas icon="cog"></mdb-icon> LOG OUT
+          </a>
+        </li>
+
+
+
+      </ul>
+      <!-- Links -->
+    </links>
+    <!-- Collapsible content -->
+
+  </mdb-navbar>
+  <!--/.Navbar-->
+</header>
+<!-- details card section starts from here -->
+<div id="banner">
+  <div id="cloud-scroll">
+
+    <div class="bg-image">
+      <div class="container">
+        <div class="row">
+
+          <ul class="ds-btn">
+            <br>
+            <br>
+            <br> <a (click)="routeDetail()" data-toggle="modal" data-target="#cardDetail" class="btn-card"><img
+                src="https://img.icons8.com/ios-glyphs/30/000000/user-female-circle.png">POST IDEA</a>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mycontainer">
+
+       <h1> {{nopost}} </h1>
+      <!-- Idea Details cards -->
+      <section *ngFor = "let a of ideaData"class="details-card">
+
+        <div class="container">
+          <div class="row">
+            <div class="">
+              <div class="card-content">
+                <div class="card-img">
+                  <img src="https://placeimg.com/380/230/tech">
+                  <script>
+                  </script>
+                </div>
+                <div class="card-desc">
+                  
+                  <h3>{{a.title}}</h3>
+                  <p></p>
+                  <!-- <a href="#" class="btn-card">Show More</a> -->
+                  <button type="button" mdbBtn color="default" rounded="true" data-toggle="modal"
+                    data-target="#basicExample" (click)="frame.show()" mdbWavesEffect>SHOW MORE</button>
+
+                  <div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog"
+                    aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-notify modal-info" role="document">
+                      <!--Content-->
+                      <div class="modal-content">
+                        <!--Header-->
+                        <div class="modal-header">
+                          <p class="heading lead">TITLE: {{a.title}}</p>
+
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                            (click)="frame.hide()">
+                            <span aria-hidden="true" class="white-text">&times;</span>
+                          </button>
+                        </div>
+
+                        <!--Body-->
+                        <div class="modal-body">
+                          <div class="text-center">
+                            <i class="fas fa-check fa-4x mb-3 animated rotateIn"></i>
+                            <p>DESCRIPTION: {{a.description}}</p>
+                            <p>DOMAIN: {{a.domain}}</p>
+                            <p>SUBDOMAIN: {{a.subDomain}}</p>
+
+                          </div>
+                        </div>
+
+                        <!--Footer-->
+                        <!-- <div class="modal-footer justify-content-center">
+
+                                  <button mdbBtn color="black" outline="true" class="waves-effect" mdbWavesEffect (click)="frame.hide()">APPLY</button>
+                                </div> -->
+                      </div>
+                      <!--/.Content-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="col-md-4">
+              <div class="card-content">
+                <div class="card-img">
+                  <img src="https://placeimg.com/380/230/tech" alt="">
+                  <span>
+                    <h4>Idea</h4>
+                  </span>
+                </div>
+                <div class="card-desc">
+                  <h3>h{{ideaData.title}}</h3>
+                  <p></p>
+                   <a href="#" class="btn-card">Show More</a>    -->
+
+                  <!-- <a (click)="routeDetails(data)" data-toggle="modal" data-target="#cardDetail" class="btn-card"><img
+                      src="https://img.icons8.com/material-rounded/24/000000/circled-chevron-down.png">Show more</a>
+                 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Show More</button> -->
+                  <!-- <div class="modal fade" id="cardDetail" role="dialog" aria-labelledby="exampleModalScrollableTitle"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title"></h5>
+                          <button type="button" (click)="onClose()" class="close" data-dismiss="modal"
+                            aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div> -->
+                        <!-- <div class="modal-body">
+                          <br>
+                          Title:
+                          <br>
+                          Description :
+                          <br>
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-success">APPLY</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  -->
+            <!-- <div class="col-md-4">
+              <div class="card-content">
+                <div class="card-img">
+                  <img src="https://placeimg.com/380/230/tech" alt="">
+                  <span>
+                    <h4>Idea</h4>
+                  </span>
+                </div>
+                <div class="card-desc">
+                  <h3>Recommended Idea</h3>
+                  <p></p>
+                   <a href="#" class="btn-card">Show More</a>    -->
+                  <!-- <a (click)="routeDetails(data)" data-toggle="modal" data-target="#cardDetail" class="btn-card"><img
+                      src="https://img.icons8.com/material-rounded/24/000000/circled-chevron-down.png">Show more</a> -->
+                  <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Show More</button> -->
+                  <!-- <div class="modal fade" id="cardDetail" role="dialog" aria-labelledby="exampleModalScrollableTitle"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title"></h5>
+                          <button type="button" (click)="onClose()" class="close" data-dismiss="modal"
+                            aria-label="Close">
+                            <span aria-hidden="true">&times;</span> -->
+                          <!-- </button>
+                        </div>
+                        <div class="modal-body">
+
+                          <br>
+                          Title:
+                          <br>
+                          Description :
+                          <br>
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-success">APPLY</button>
+                        </div>
+                      </div> -->
+                    <!-- </div>
+                  </div>
+                </div>
+              </div>
+            </div> --> 
+          </div>
+        </div>
+
+      </section>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- details card section starts from here -->

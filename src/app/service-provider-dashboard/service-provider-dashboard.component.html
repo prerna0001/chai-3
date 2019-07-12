@@ -1,0 +1,137 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+</head>
+
+
+<header>
+  <!--Navbar-->
+<mdb-navbar SideClass="blue-gradient navbar navbar-expand-lg" [containerInside]="false">
+
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" href="#">COLLAB-JUNCTION</a></mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+
+    <!-- Links -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a href="/home" class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="home"></mdb-icon> HOME <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a (click)="goToProfile()" class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="user"></mdb-icon> PROFILE </a>
+      </li>
+
+      <li class="nav-item">
+          <a href="/home" class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="cog"></mdb-icon> LOG OUT </a>
+        </li>
+
+     
+
+    </ul>
+    <!-- Links -->
+  </links>
+  <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
+</header>
+<!-- details card section starts from here -->
+<div id="banner">
+    <div id="cloud-scroll">
+      
+<div class="bg-image">
+    <div class="container">
+        <div class="row">
+           
+          <ul class="ds-btn">
+        <br>
+        <br>
+ 
+          </ul>
+          
+        </div>
+      </div>
+<section class="details-card">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card-content">
+                    <div class="card-img">
+                      
+                        <img src="https://placeimg.com/380/230/tech" >
+                        <script>
+                        </script>
+                    </div>
+                    <div class="card-desc" *ngFor="let data of recommendedIdeas">
+                        <h3>{{data.ideaTitle}}</h3>
+                        <p></p>
+                            <!-- <a href="#" class="btn-card">Show More</a> -->
+                            <button type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample" (click)="frame.show()"
+                            mdbWavesEffect>SHOW MORE</button>
+                          
+                          <div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-notify modal-info" role="document">
+                              <!--Content-->
+                              <div class="modal-content">
+                                <!--Header-->
+                                <div class="modal-header">
+                                  <p class="heading lead">{{data.ideaTitle}}</p>
+                          
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+                                    <span aria-hidden="true" class="white-text">&times;</span>
+                                  </button>
+                                </div>
+                          
+                                <!--Body-->
+                                <div class="modal-body">
+                                  <div class="text-center">
+                                    <i class="fas fa-check fa-4x mb-3 animated rotateIn"></i>
+                                    <p>{{data.ideaDescription}}</p>
+                                    <p>{{data.domain}}</p>
+                                    <p>{{data.subDomain}}</p>
+                                  </div>
+                                </div>
+                          
+                                <!--Footer-->
+                                <div class="modal-footer justify-content-center">
+
+                                  <button mdbBtn color="black" outline="true" class="waves-effect" mdbWavesEffect (click)="frame.hide()">APPLY</button>
+                                </div>
+                              </div>
+                              <!--/.Content-->
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+  
+</section>
+
+
+</div>
+</div>
+</div>
+
+<!-- details card section starts from here -->

@@ -1,0 +1,324 @@
+/* Required for full background image */
+
+html,
+body,
+header{
+  min-height: 100vh;
+}
+
+.h1-responsive{
+  color:white;
+}
+
+
+.view{
+  // margin-top:100px;
+background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); 
+height:100%; 
+background-repeat: no-repeat; 
+background-size: cover; 
+background-position: center center;
+min-height: 100vh;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 1000px;
+  }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 600px;
+  }
+}
+
+.btn .fa {
+  margin-left: 3px;
+}
+
+.top-nav-collapse {
+  background-color: #424f95 !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #424f95 !important;
+  }
+}
+
+.btn-white {
+  color: black !important;
+}
+
+h6 {
+  line-height: 1.7;
+}
+
+.rgba-gradient {
+  background: -moz-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+  background: -webkit-gradient(linear, 45deg, from(rgba(42, 27, 161, 0.7)), to(rgba(29, 210, 177, 0.7)));
+  background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+  background: linear-gradient(to 45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%)
+}
+
+.view.mask {
+  overflow: auto !important;
+}
+
+
+
+
+
+
+
+form{
+
+    padding-bottom: 100px; 
+    
+    }
+    
+    .cardBody	{
+      background-color: blue-gradient;
+        // background-image: url("https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
+    
+    }
+    
+    button{
+        margin-left: 110px;
+        color: white;
+        background-color: rgb(47, 49, 48);
+    }
+    
+    
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      // .navbar
+      // {
+      //   background-color: #dedfe0; 
+      //   height: 120px;
+      // }
+      
+      .btn-success{
+      margin-left: 70px;
+      }
+      
+      a{
+          text-decoration: none;
+          color: white;
+      }
+      
+      a:hover{
+          text-decoration: none;
+          color: white;
+      }
+        
+        button.btn {
+          margin-top: auto;
+        }
+      
+      h5	{
+          font-size: 20px;
+          line-height: 30px;
+          font-weight: 600;
+      }
+      
+      // .radioButton{
+      //     margin-left: 250px;
+      //     font-size: 18px;
+      //     line-height: 30px;
+      //     font-weight: 600;
+      // }
+      
+      // .logo	{
+      //     height: 110px;
+      //     width: 110px;
+      // }
+      // .radio{
+      //     background-color:white;
+      
+      // }
+      
+      
+      
+      
+       
+        /* Responsive columns - one column layout (vertical) on small screens */
+       
+        body {font-family: Arial, Helvetica, sans-serif;}
+       
+      
+        /* Set a style for all buttons */
+      
+        button:hover {
+          opacity: 0.8;
+        }
+       
+      
+       
+        Center the image and position the close button
+        .imgcontainer {
+          text-align: center;
+          margin: 24px 0 12px 0;
+          position: relative;
+        }
+       
+        .container {
+          padding: 16px;
+        }
+       
+        span.psw {
+          float: right;
+          padding-top: 16px;
+        }
+       
+        /* The Modal (background) */
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+        //   background-color: rgb(0,0,0); /* Fallback color */
+        //   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+     border:1px solid black;
+          padding-top: 60px;
+        }
+       
+        /* Modal Content/Box */
+        .modal-content {
+          background-color: #fefefe;
+          margin: 5% auto 55% auto; /* 5% from the top, 15% from the bottom and centered */
+          border: 1px solid #888;
+          width: 100%; /* Could be more or less, depending on screen size */
+          height: 100px;
+        }
+       
+        /* .navbar-toggler-icon{
+            background-color: black;
+            color:white;
+        } */
+       
+        /* Add Zoom Animation */
+        .animate {
+          -webkit-animation: animatezoom 0.6s;
+          animation: animatezoom 0.6s
+        }
+       
+        @-webkit-keyframes animatezoom {
+          from {-webkit-transform: scale(0)}
+          to {-webkit-transform: scale(1)}
+        }
+       
+        @keyframes animatezoom {
+          from {transform: scale(0)}
+          to {transform: scale(1)}
+        }
+       
+        /* Change styles for span and cancel button on extra small screens */
+      
+      
+       
+       
+        .navi a {
+            text-decoration:none;
+        }
+        /* a > .ico {
+            background-color: grey;
+            padding: 10px;
+            
+        } */
+        /* a:hover > .ico {
+            background-color: #666;
+        } */
+       .body-image{
+           background-image: url("https://1800cabinetwholesalers.com/wp-content/uploads/2014/12/wood-background.jpg")
+       }
+       button:hover {
+          opacity: 0.8;
+          background-color: black;
+          color:white;
+        }
+      
+        .btn-active{
+          background-color: black;
+          color:white;
+      }
+      
+      
+      
+      @media (max-width: 300px) {
+          img.logo{
+          margin-left: 80px;
+          }
+          /* #header .container {
+            width: 100%;
+            height: 50%;
+          }
+          #header h1 {
+            padding-left: 3%;
+          }
+          #nav {
+            width: 100%;
+            top: 60px;
+          }
+          #nav:before {
+            content: '\2630';
+            display: block;
+            position: absolute;
+            right: 3%;
+            top: -50px;
+            line-height: 40px;
+            font-size: 1.4em;
+            cursor: pointer;
+          }
+          #nav ul {
+            background: #222;
+            width: 100%;
+            margin: 0px;
+          }
+          #nav ul li {
+            float: none;
+          }
+          #nav ul li a {
+            padding: 10px 3%;
+            line-height: 20px;
+            border-top: 1px solid #333;
+          }*/
+      }
+      
+ 
+      
+      body { 
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      }
+      
+  
+      
