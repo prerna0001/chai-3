@@ -83,14 +83,14 @@ export class InnovatorDashboardComponent implements OnInit {
     this.registrationService.getIdeasPostedByInnovator(emailId).subscribe((data: any) => {
       console.log("data fetched..from getideapostedbyinnovator..", data);
       this.ideaData = data;
-      console.log("see data.0. ", this.ideaData[0]);
-      console.log("see data.1. ", this.ideaData[0].title);
+      // console.log("see data.0. ", this.ideaData[0]);
+      // console.log("see data.1. ", this.ideaData[0].title);
+      if(this.ideaData.length==0)
+      {
+        console.log("Testing...if ");
+        this.nopost = "You haven't posted any ideas yet !!!";
+      }
     });
-
-    if (this.ideaData[0]) {
-      console.log("Testing...." + this.ideaData[0]);
-      this.nopost = "You haven't posted any ideas yet !!!"
-    }
 
   }
 

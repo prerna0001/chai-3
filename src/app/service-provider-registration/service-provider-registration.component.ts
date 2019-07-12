@@ -105,12 +105,19 @@ conf:string;
     console.log(this.form);
     let providerData ={
       name:this.firstFormGroup.controls.FirstName.value,
+
       emailId:this.secondFormGroup.controls.email.value,
+      
       password:this.secondFormGroup.controls.password.value,
+      
       domain:this.secondFormGroup.controls.domainCtrl.value,
+      
       subDomain:this.thirdFormGroup.controls.subdomain.value,
+      
       skills:this.thirdFormGroup.controls.skill.value,
+      
       role:this.thirdFormGroup.controls.role.value,
+      
       chargePerHour:this.thirdFormGroup.controls.chargePerHour.value
 
     }

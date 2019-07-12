@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {FormControl} from '@angular/forms';
 import { MatDialog } from '@angular/material';
 import subdomain from 'src/assets/jsonfiles/data2.json';
+import { RegistrationServiceService } from '../registration-service.service';
 
 
 @Component({
@@ -34,7 +35,7 @@ i:any;
 subDomainList:any=[];
 
 
-  constructor(private _formBuilder: FormBuilder,private dialog:MatDialog) { }
+  constructor(private _formBuilder: FormBuilder,private dialog:MatDialog,private registrationService:RegistrationServiceService) { }
   getErrorFnameMessage(){
     // return this.firstFormGroup.controls.FirstName.hasError('required') ? 'You must enter a value':'';
   }
@@ -96,14 +97,14 @@ subDomainList:any=[];
    let innovatorData={
    
       emailId:this.secondFormGroup.controls.email.value,
-       password:this.secondFormGroup.controls.password.value,
-       name:this.firstFormGroup.controls.FirstName.value,
-       domain:this.secondFormGroup.controls.domainCtrl.value,
-       subDomain:this.thirdFormGroup.controls.subdomain.value,
+      password:this.secondFormGroup.controls.password.value,
+      name:this.firstFormGroup.controls.FirstName.value,
+      domain:this.secondFormGroup.controls.domainCtrl.value,
+      subDomain:this.thirdFormGroup.controls.subdomain.value,
    }
 
    console.log(innovatorData);
+   this.registrationService.addInnovatorProfile(innovatorData);
 
- 
-}
+  }
 }
