@@ -18,7 +18,11 @@ id;
       console.log(data);
       this.arrayOfIdeas=data;
 
+     
     })
+
+    
+
 
  
 }
