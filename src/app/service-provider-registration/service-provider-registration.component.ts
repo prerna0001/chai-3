@@ -8,6 +8,7 @@ import { LoginService } from '../login.service';
 import subdomain from 'src/assets/jsonfiles/data2.json';
 import skills from 'src/assets/jsonfiles/data4.json';
 import { RegistrationServiceService } from '../registration-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-service-provider-registration',
@@ -40,7 +41,7 @@ conf:string;
 
 
 
-  constructor(private _formBuilder: FormBuilder,private registrationService:RegistrationServiceService,private dialog:MatDialog) { }
+  constructor(private _formBuilder: FormBuilder,private registrationService:RegistrationServiceService,private dialog:MatDialog, private router: Router) { }
   getErrorFnameMessage(){
     // return this.firstFormGroup.controls.FirstName.hasError('required') ? 'You must enter a value':'';
   }
@@ -123,6 +124,7 @@ conf:string;
     }
     console.log(providerData);
     this.registrationService.addServiceProvider(providerData);
+    this.router.navigateByUrl('/home');
 
   }
 }

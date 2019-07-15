@@ -1,0 +1,15 @@
+<p>{{ideaDetail.title}}</p>
+<p>{{ideaDetail.domain}}</p>
+<p>{{ideaDetail.subDomain}}</p>
+<p>{{ideaDetail.description}}</p>
+
+
+<div *ngFor="let data of ideaDetail.serviceProviders">
+<p>{{data.name}}</p>
+</div>
+
+<div *ngFor="let data of appliedSP">
+    <p>{{data.name}}</p>
+    <button (click)="onApprove(data.emailId)">Approve</button>
+    <button (click)="onReject(data.emailId)">Reject</button>
+    </div>

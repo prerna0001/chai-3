@@ -14,6 +14,21 @@ export class RecentIdeasService {
   }
 
   getIdeaDetails(value):any{
-    return this.httpclient.get(`http://localhost:3000/ideas/${value}`)
+    return this.httpclient.get(`http://localhost:8063/idea/${value}`)
+  }
+
+  sendToInnovator(title,emailId):any{
+    this.httpclient.put(`http://localhost:8060/api/v1/idea/${title}/${emailId}`,{}).subscribe();
+    console.log("came");
+
+  }
+
+  getAppliedServiceProviders(title):any
+  {
+    this.httpclient.get(`http://localhost:8060/api/v1//serviceProviders/${title}`)
+  }
+
+  approveOrRejectSP(title,emailId,status):any{
+this.httpclient.put(`http://localhost:8060/api/v1/serviceProviders/${title}/${emailId}/${status}`,{}).subscribe();
   }
 }

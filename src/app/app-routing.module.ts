@@ -15,6 +15,8 @@ import { PostIdeaComponent } from './post-idea/post-idea.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { IntelligentServiceComponent } from './intelligent-service/intelligent-service.component';
+import { AllIdeasComponent } from './all-ideas/all-ideas.component';
+import { IdeaDetailComponent } from './idea-detail/idea-detail.component';
 
 
 
@@ -36,6 +38,11 @@ const routes: Routes = [
   {path:'footer',component:FooterComponent},
   {path:'result/:roles',component:IntelligentServiceComponent},
   {path: 'acceptedSerProviders/:servProviders',component:PostIdeaComponent},
+{path:'allIdeas',component:AllIdeasComponent},
+{path:'ideaDetail/:title',component:IdeaDetailComponent},
+
+{path:'serviceDashboard',component:ServiceProviderDashboardComponent},  //for trial, remove after use
+
 
 
 

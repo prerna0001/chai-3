@@ -45,6 +45,11 @@ export class InnovatorProfileComponent implements OnInit {
       this.innovatorprofiledashboarddata=data;
       console.log("after getting back from service",this.innovatorprofiledashboarddata.emailId)
     });
-  }  
+  }
+  
+  goToDashboard():any{
+    const emailId=this.route.snapshot.paramMap.get('sendEmailId');
+this.router.navigateByUrl('/innovatorDashboard/'+emailId);
+  }
 
 }

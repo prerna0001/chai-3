@@ -65,12 +65,8 @@ export class IntelligentServiceComponent implements OnInit {
 
 
 
-  public accept() {
-    length = this.arrayOfServiceProviders.length;
-
-    this.servProvider = this.arrayOfServiceProviders[length - 1];
-    this.acceptedServiceProvoders.push(this.servProvider);
-     this.arrayOfServiceProviders.pop(this.servProvider);
+  public accept(value) {
+     this.acceptedServiceProvoders.push(value);
     console.log( "acceptedprovoders", this.acceptedServiceProvoders)
      
     this.postIdeaService.Idea.serviceProviders=this.acceptedServiceProvoders;
@@ -86,11 +82,9 @@ export class IntelligentServiceComponent implements OnInit {
     
   
 
-  public reject() {
-    length = this.arrayOfServiceProviders.length;
-
-    this.servProvider = this.arrayOfServiceProviders[length - 1];
-    this.arrayOfServiceProviders.pop(this.servProvider)
+  public reject(value) {
+   let index=this.arrayOfServiceProviders.indexOf(value);
+   this.arrayOfServiceProviders.splice(index,1);
   }
 
 

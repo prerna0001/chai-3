@@ -37,6 +37,8 @@ import { PostIdeaServiceService } from './post-idea-service.service';
 import { FooterComponent } from './footer/footer.component';
 import { IntelligentServiceComponent } from './intelligent-service/intelligent-service.component';
 import { InnovatorRegistrartionComponent } from './innovator-registrartion/innovator-registrartion.component';
+import { AllIdeasComponent } from './all-ideas/all-ideas.component';
+import { IdeaDetailComponent } from './idea-detail/idea-detail.component';
 
 
 
@@ -72,6 +74,8 @@ import { InnovatorRegistrartionComponent } from './innovator-registrartion/innov
     IntelligentServiceComponent,
     InnovatorRegistrartionComponent,
     ServiceProviderRegistrationComponent,
+    AllIdeasComponent,
+    IdeaDetailComponent
 
 
 

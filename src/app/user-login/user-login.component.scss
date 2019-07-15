@@ -1,18 +1,23 @@
 /* Required for full background image */
 
+.rgba-gradient {
+	background: -moz-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+	background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+	background: -webkit-gradient(linear, 45deg, from(rgba(42, 27, 161, 0.7)), to(rgba(29, 210, 177, 0.7)));
+	background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+	background: linear-gradient(to 45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+	background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%)
+  }
+
 html,
 body,
-header{
-  min-height: 100vh;
-}
-
-.h1-responsive{
-  color:white;
+header,
+.view {
+  height: 100%;
 }
 
 
 .view{
-  // margin-top:100px;
 background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); 
 height:100%; 
 background-repeat: no-repeat; 
@@ -20,30 +25,201 @@ background-size: cover;
 background-position: center center;
 min-height: 100vh;
 }
+:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+.login-wrap{
+	width: 100%;
+	margin:auto;
+	max-width:510px;
+	min-height:510px;
+	position:relative;
+	background:url(https://maxcdn.icons8.com/app/uploads/2016/03/material-1-1000x563.jpg) no-repeat center;
+	background-size: cover;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+.login-html{
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:90px 70px 50px 70px;
+	background:rgba(0,0,0,0.5);
+}
+.login-html .sign-in-htm,
+.login-html .for-pwd-htm{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	-webkit-transform:rotateY(180deg);
+	        transform:rotateY(180deg);
+	-webkit-backface-visibility:hidden;
+	        backface-visibility:hidden;
+	-webkit-transition:all .4s linear;
+	transition:all .4s linear;
+}
+.login-html .sign-in,
+.login-html .for-pwd,
+.login-form .group .check{
+	display:none;
+}
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button{
+	text-transform:uppercase;
+}
+.login-html .tab{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+}
+.login-html .sign-in:checked + .tab,
+.login-html .for-pwd:checked + .tab{
+	color:#fff;
+	border-color:#1161ee;
+}
+.login-form{
+	min-height:345px;
+	position:relative;
+	-webkit-perspective:1000px;
+	        perspective:1000px;
+	-webkit-transform-style:preserve-3d;
+	        transform-style:preserve-3d;
+}
+.login-form .group{
+	margin-bottom:15px;
+}
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+	width:100%;
+	color:#fff;
+	display:block;
+}
+.login-form .group .input,
+.login-form .group .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+}
+.login-form .group input[data-type="password"]{
+	text-security:circle;
+	-webkit-text-security:circle;
+}
+.login-form .group .label{
+	color:#aaa;
+	font-size:12px;
+}
+.login-form .group .button{
+	background:#1161ee;
+}
+.login-form .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:rgba(255,255,255,.1);
+}
+.login-form .group label .icon:before,
+.login-form .group label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:#fff;
+	position:absolute;
+	-webkit-transition:all .2s ease-in-out 0s;
+	transition:all .2s ease-in-out 0s;
+}
+.login-form .group label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	-webkit-transform:scale(0) rotate(0);
+	        transform:scale(0) rotate(0);
+}
+.login-form .group label .icon:after{
+	top:6px;
+	right:0;
+	-webkit-transform:scale(0) rotate(0);
+	        transform:scale(0) rotate(0);
+}
+.login-form .group .check:checked + label{
+	color:#fff;
+}
+.login-form .group .check:checked + label .icon{
+	background:#1161ee;
+}
+.login-form .group .check:checked + label .icon:before{
+	-webkit-transform:scale(1) rotate(45deg);
+	        transform:scale(1) rotate(45deg);
+}
+.login-form .group .check:checked + label .icon:after{
+	-webkit-transform:scale(1) rotate(-45deg);
+	        transform:scale(1) rotate(-45deg);
+}
+.login-html .sign-in:checked + .tab + .for-pwd + .tab + .login-form .sign-in-htm{
+	-webkit-transform:rotate(0);
+	        transform:rotate(0);
+}
+.login-html .for-pwd:checked + .tab + .login-form .for-pwd-htm{
+	-webkit-transform:rotate(0);
+	        transform:rotate(0);
+}
+
+.hr{
+	height:2px;
+	margin:60px 0 50px 0;
+	background:rgba(255,255,255,.2);
+}
+.foot-lnk{
+	text-align:center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 740px) {
   html,
   body,
   header,
   .view {
-    height: 1000px;
+    height: 1100px;
   }
+
+  
 }
 @media (min-width: 800px) and (max-width: 850px) {
   html,
   body,
   header,
   .view {
-    height: 600px;
+    height: 700px;
   }
 }
 
-.btn .fa {
-  margin-left: 3px;
-}
-
 .top-nav-collapse {
-  background-color: #424f95 !important;
+  background-color: #39448c !important;
 }
 
 .navbar:not(.top-nav-collapse) {
@@ -52,273 +228,10 @@ min-height: 100vh;
 
 @media (max-width: 991px) {
   .navbar:not(.top-nav-collapse) {
-    background: #424f95 !important;
+    background: #39448c !important;
   }
-}
-
-.btn-white {
-  color: black !important;
 }
 
 h6 {
   line-height: 1.7;
 }
-
-.rgba-gradient {
-  background: -moz-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
-  background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
-  background: -webkit-gradient(linear, 45deg, from(rgba(42, 27, 161, 0.7)), to(rgba(29, 210, 177, 0.7)));
-  background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
-  background: linear-gradient(to 45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
-  background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%)
-}
-
-.view.mask {
-  overflow: auto !important;
-}
-
-
-
-
-
-
-
-form{
-
-    padding-bottom: 100px; 
-    
-    }
-    
-    .cardBody	{
-      background-color: blue-gradient;
-        // background-image: url("https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center center;
-    
-    }
-    
-    button{
-        margin-left: 110px;
-        color: white;
-        background-color: rgb(47, 49, 48);
-    }
-    
-    
-      
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-      // .navbar
-      // {
-      //   background-color: #dedfe0; 
-      //   height: 120px;
-      // }
-      
-      .btn-success{
-      margin-left: 70px;
-      }
-      
-      a{
-          text-decoration: none;
-          color: white;
-      }
-      
-      a:hover{
-          text-decoration: none;
-          color: white;
-      }
-        
-        button.btn {
-          margin-top: auto;
-        }
-      
-      h5	{
-          font-size: 20px;
-          line-height: 30px;
-          font-weight: 600;
-      }
-      
-      // .radioButton{
-      //     margin-left: 250px;
-      //     font-size: 18px;
-      //     line-height: 30px;
-      //     font-weight: 600;
-      // }
-      
-      // .logo	{
-      //     height: 110px;
-      //     width: 110px;
-      // }
-      // .radio{
-      //     background-color:white;
-      
-      // }
-      
-      
-      
-      
-       
-        /* Responsive columns - one column layout (vertical) on small screens */
-       
-        body {font-family: Arial, Helvetica, sans-serif;}
-       
-      
-        /* Set a style for all buttons */
-      
-        button:hover {
-          opacity: 0.8;
-        }
-       
-      
-       
-        Center the image and position the close button
-        .imgcontainer {
-          text-align: center;
-          margin: 24px 0 12px 0;
-          position: relative;
-        }
-       
-        .container {
-          padding: 16px;
-        }
-       
-        span.psw {
-          float: right;
-          padding-top: 16px;
-        }
-       
-        /* The Modal (background) */
-        .modal {
-          display: none; /* Hidden by default */
-          position: fixed; /* Stay in place */
-          z-index: 1; /* Sit on top */
-          left: 0;
-          top: 0;
-          width: 100%; /* Full width */
-          height: 100%; /* Full height */
-          overflow: auto; /* Enable scroll if needed */
-        //   background-color: rgb(0,0,0); /* Fallback color */
-        //   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-     border:1px solid black;
-          padding-top: 60px;
-        }
-       
-        /* Modal Content/Box */
-        .modal-content {
-          background-color: #fefefe;
-          margin: 5% auto 55% auto; /* 5% from the top, 15% from the bottom and centered */
-          border: 1px solid #888;
-          width: 100%; /* Could be more or less, depending on screen size */
-          height: 100px;
-        }
-       
-        /* .navbar-toggler-icon{
-            background-color: black;
-            color:white;
-        } */
-       
-        /* Add Zoom Animation */
-        .animate {
-          -webkit-animation: animatezoom 0.6s;
-          animation: animatezoom 0.6s
-        }
-       
-        @-webkit-keyframes animatezoom {
-          from {-webkit-transform: scale(0)}
-          to {-webkit-transform: scale(1)}
-        }
-       
-        @keyframes animatezoom {
-          from {transform: scale(0)}
-          to {transform: scale(1)}
-        }
-       
-        /* Change styles for span and cancel button on extra small screens */
-      
-      
-       
-       
-        .navi a {
-            text-decoration:none;
-        }
-        /* a > .ico {
-            background-color: grey;
-            padding: 10px;
-            
-        } */
-        /* a:hover > .ico {
-            background-color: #666;
-        } */
-       .body-image{
-           background-image: url("https://1800cabinetwholesalers.com/wp-content/uploads/2014/12/wood-background.jpg")
-       }
-       button:hover {
-          opacity: 0.8;
-          background-color: black;
-          color:white;
-        }
-      
-        .btn-active{
-          background-color: black;
-          color:white;
-      }
-      
-      
-      
-      @media (max-width: 300px) {
-          img.logo{
-          margin-left: 80px;
-          }
-          /* #header .container {
-            width: 100%;
-            height: 50%;
-          }
-          #header h1 {
-            padding-left: 3%;
-          }
-          #nav {
-            width: 100%;
-            top: 60px;
-          }
-          #nav:before {
-            content: '\2630';
-            display: block;
-            position: absolute;
-            right: 3%;
-            top: -50px;
-            line-height: 40px;
-            font-size: 1.4em;
-            cursor: pointer;
-          }
-          #nav ul {
-            background: #222;
-            width: 100%;
-            margin: 0px;
-          }
-          #nav ul li {
-            float: none;
-          }
-          #nav ul li a {
-            padding: 10px 3%;
-            line-height: 20px;
-            border-top: 1px solid #333;
-          }*/
-      }
-      
- 
-      
-      body { 
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      }
-      
-  
-      

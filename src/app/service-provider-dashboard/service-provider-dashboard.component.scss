@@ -1,3 +1,23 @@
+body{
+    background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); 
+  height:100%; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: center center;
+  min-height: 100vh;
+  }
+  
+  .rgba-gradient {
+    background: -moz-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: -webkit-gradient(linear, 45deg, from(rgba(42, 27, 161, 0.7)), to(rgba(29, 210, 177, 0.7)));
+    background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: linear-gradient(to 45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%)
+  }
+  
+
+
 .ds-btn li{ list-style:none; float:left; padding:10px; }
 .ds-btn li a span{padding-left:15px;padding-right:5px;width:100%;display:inline-block; text-align:left;}
 .ds-btn li a span small{ display:inline-block; text-align:left;}

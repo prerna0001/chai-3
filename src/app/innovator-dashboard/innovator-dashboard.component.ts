@@ -94,4 +94,9 @@ export class InnovatorDashboardComponent implements OnInit {
 
   }
 
+  getAllIdeaDetail(value):any{
+    console.log("this is the title"+ value);
+    this.router.navigateByUrl('/ideaDetail/'+value);
+  }
+
 }

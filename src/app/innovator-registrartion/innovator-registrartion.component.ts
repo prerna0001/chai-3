@@ -4,6 +4,7 @@ import {FormControl} from '@angular/forms';
 import { MatDialog } from '@angular/material';
 import subdomain from 'src/assets/jsonfiles/data2.json';
 import { RegistrationServiceService } from '../registration-service.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -35,7 +36,7 @@ i:any;
 subDomainList:any=[];
 
 
-  constructor(private _formBuilder: FormBuilder,private dialog:MatDialog,private registrationService:RegistrationServiceService) { }
+  constructor(private _formBuilder: FormBuilder,private dialog:MatDialog,private registrationService:RegistrationServiceService, private router: Router) { }
   getErrorFnameMessage(){
     // return this.firstFormGroup.controls.FirstName.hasError('required') ? 'You must enter a value':'';
   }
@@ -105,6 +106,8 @@ subDomainList:any=[];
 
    console.log(innovatorData);
    this.registrationService.addInnovatorProfile(innovatorData);
+   this.router.navigateByUrl('/home');
+
 
   }
 }

@@ -1,0 +1,52 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<section id="ideas" class="pb-5">
+    <div class="container" style="margin-top: 100px">
+        <h5 class="section-title h1">IDEAS</h5>
+        <div class="row">
+
+                <mat-form-field appearance="outline">
+                        <mat-label>Search Track</mat-label>
+                        <input #input matInput placeholder=" Enter Track Name">
+                        <button (click)="search(input.value)">SEARCH</button>
+                        <mat-icon matSuffix>search</mat-icon>
+                    </mat-form-field>
+
+                        <div class="row">
+                            <div class="col-sm-3 card" *ngFor="let array of arrayOfIdeas">
+                    
+                                <div class="card-body text-center">
+                                    <!-- <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image"></p> -->
+                                    <h4 #title class="card-title">{{array.title}}</h4>
+                                    <p class="card-text" style="text-align:justify">{{array.description}}</p>
+                                    <a (click)="applyForAnIdea(title.value)" class="btn btn-primary btn-sm">APPLY</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                
+            </div>
+          
+     
+</section>
+<!-- Team -->
+
+
+
+
+    
+      

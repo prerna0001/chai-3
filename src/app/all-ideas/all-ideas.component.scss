@@ -1,0 +1,70 @@
+// /* FontAwesome for working BootSnippet :> */
+
+// @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+// #ideas {
+//     background: blue-gradient !important;
+// }
+
+// .row{
+//     padding-left:50px;
+// }
+
+// section {
+//     padding: 60px;
+// }
+
+// section .section-title {
+//     text-align: center;
+//     color: black;
+//     margin-bottom: 50px;
+//     text-transform: uppercase;
+// }
+
+// #team .card {
+//     border: none;
+//     background: #ffffff;
+// }
+
+
+// .frontside .card{
+//     min-height: 312px;
+// }
+
+// .frontside .card .card-title
+// {
+//     color: #007b5e !important;
+// }
+
+// .frontside .card .card-body img {
+//     width: 120px;
+//     height: 120px;
+//     border-radius: 50%;
+// }
+
+// .card{
+//     margin: 8px;
+// }
+
+
+.track-card {
+    margin: 15px;
+    bottom: 20%;
+    top:20%;
+  }
+  
+  .track-card:hover {
+    box-shadow: 10px 10px 10px black;
+  }
+  
+  button {
+    font-size: 25px;
+    margin: 5px;
+  }
+  
+  .d-none {
+    display: none;
+  }
+  
+  button:hover {
+    box-shadow: 5px 5px black;
+  }

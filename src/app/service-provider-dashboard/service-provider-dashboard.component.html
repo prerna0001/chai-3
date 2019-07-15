@@ -54,84 +54,42 @@
 <!--/.Navbar-->
 </header>
 <!-- details card section starts from here -->
-<div id="banner">
-    <div id="cloud-scroll">
-      
+<body class="view">
+    <div class="mask rgba-gradient">
 <div class="bg-image">
-    <div class="container">
-        <div class="row">
-           
-          <ul class="ds-btn">
-        <br>
-        <br>
- 
-          </ul>
-          
-        </div>
-      </div>
-<section class="details-card">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card-content">
-                    <div class="card-img">
-                      
-                        <img src="https://placeimg.com/380/230/tech" >
-                        <script>
-                        </script>
-                    </div>
-                    <div class="card-desc" *ngFor="let data of recommendedIdeas">
-                        <h3>{{data.ideaTitle}}</h3>
-                        <p></p>
-                            <!-- <a href="#" class="btn-card">Show More</a> -->
-                            <button type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample" (click)="frame.show()"
-                            mdbWavesEffect>SHOW MORE</button>
-                          
-                          <div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-notify modal-info" role="document">
-                              <!--Content-->
-                              <div class="modal-content">
-                                <!--Header-->
-                                <div class="modal-header">
-                                  <p class="heading lead">{{data.ideaTitle}}</p>
-                          
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
-                                    <span aria-hidden="true" class="white-text">&times;</span>
-                                  </button>
-                                </div>
-                          
-                                <!--Body-->
-                                <div class="modal-body">
-                                  <div class="text-center">
-                                    <i class="fas fa-check fa-4x mb-3 animated rotateIn"></i>
-                                    <p>{{data.ideaDescription}}</p>
-                                    <p>{{data.domain}}</p>
-                                    <p>{{data.subDomain}}</p>
-                                  </div>
-                                </div>
-                          
-                                <!--Footer-->
-                                <div class="modal-footer justify-content-center">
 
-                                  <button mdbBtn color="black" outline="true" class="waves-effect" mdbWavesEffect (click)="frame.hide()">APPLY</button>
-                                </div>
-                              </div>
-                              <!--/.Content-->
-                            </div>
-                          </div>
-                    </div>
-                </div>
-            </div>
-        
-        </div>
-    </div>
-  
-</section>
-
-
+    <section class="details-card">
+        <h2 class="h1-responsive font-weight-bold text-center my-5">RECOMMENDED IDEAS</h2>
+	
+       <div class="container">
+         
+         <div class="row">
+           <div class="col-md-4" *ngFor="let data of recommendedIdeas">
+             <div class="card-content">
+               <div class="card-img">
+                 <img src="https://images.unsplash.com/photo-1474631245212-32dc3c8310c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=924&q=80" alt="">
+                 <span><h4>Idea</h4></span>
+               </div>
+               <div class="card-desc">
+             
+                 <p>{{data.ideaTitle}}</p>
+                 <p>{{data.ideaDescription}}</p>
+                 <p>{{data.domain}}</p>
+                 <p>{{data.subDomain}}</p>
+                 <p>{{data.roles}}</p>
+                 <div class="wrapper">
+                   <a (click)="applyForAnIdea(title.value)" class="btn-card">Apply</a>  
+                 </div> 
+               </div>
+             </div>
+           </div>
+           </div>
+           </div>
+    </section>
 </div>
 </div>
-</div>
+    </body>
+
+
 
 <!-- details card section starts from here -->
