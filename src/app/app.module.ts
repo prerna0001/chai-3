@@ -43,15 +43,7 @@ import { IdeaDetailComponent } from './idea-detail/idea-detail.component';
 
 
 // import {MatCheckboxClickAction, MAT_CHECKBOX_CLICK_ACTION,MatCheckboxModule} from '@angular/material'
-
-
-
-
-
 // import { MatAutocomplete } from '@angular/material';
-
-
-
 
 @NgModule({
   declarations: [
@@ -63,8 +55,6 @@ import { IdeaDetailComponent } from './idea-detail/idea-detail.component';
     HomeComponent,
     ServiceProviderRegistrationComponent,
     PostIdeaComponent,
-
-
     UserLoginComponent,
     ServiceProviderDashboardComponent,
     ServiceProviderProfileComponent,
@@ -75,16 +65,12 @@ import { IdeaDetailComponent } from './idea-detail/idea-detail.component';
     InnovatorRegistrartionComponent,
     ServiceProviderRegistrationComponent,
     AllIdeasComponent,
-    IdeaDetailComponent
-
-
-
-
-
+    IdeaDetailComponent,
+    InnovatorRegistrartionComponent
   ],
+
   imports: [
     BrowserModule,
-
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
     NavbarModule, WavesModule, ButtonsModule, CardsFreeModule, CheckboxModule, InputsModule, IconsModule,
@@ -100,7 +86,6 @@ import { IdeaDetailComponent } from './idea-detail/idea-detail.component';
     MatSelectModule,
     MatOptionModule,
     MatCheckboxModule,
-
     MatButtonToggleModule,
     MatStepperModule,
     MatInputModule,
@@ -121,10 +106,7 @@ import { IdeaDetailComponent } from './idea-detail/idea-detail.component';
     ReactiveFormsModule,
     MatSelectModule,
     MatOptionModule,
-    MatCheckboxModule,
-
-
-
+    MatCheckboxModule
   ],
   providers: [PostIdeaServiceService, { provide: MatDialogRef, useValue: {} }, { provide: MAT_CHECKBOX_CLICK_ACTION, useValue: 'check' }],
   bootstrap: [AppComponent]

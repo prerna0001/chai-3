@@ -1,10 +1,15 @@
+FROM node:carbon
 
-FROM node:12
+WORKDIR /app
 
-ADD /
+COPY . .
 
-WORKDIR /i2ps/angular-frontend
+RUN npm install
 
-RUN npm install http-server -g
+RUN npm run build
 
-CMD ["http-server"]
+RUN npm install -g http-server
+
+WORKDIR /app/dist/your-angular-project
+
+CMD ["http-server", "-p", "8042"]
